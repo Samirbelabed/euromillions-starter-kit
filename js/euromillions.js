@@ -12,7 +12,7 @@ setTimeout(**)
 
 
 let euro = document.getElementById('euromillions');
-let res = document.getElementById('resultat');
+let result = document.getElementById('resultat');
 let bshow = document.getElementsByClassName('zone boule show');
 let eshow = document.getElementsByClassName('zone etoile show');
 
@@ -33,12 +33,10 @@ while (numeros.length < 5) {
 
     };
 
-
-
-
-
-
 };
+
+
+
 console.log(numeros);
 
 
@@ -65,15 +63,16 @@ console.log(compl);
 
 
 
-numeros.forEach((boule) => {
+numeros.forEach((tirage) => {
 
 
     let boules = document.createElement('div');
   
-    boules.textContent = boule.nombreAleatoire;
+    boules.textContent = tirage.nombreAleatoire;
     boules.classList.add('zone', 'boule', 'show');
 
-    bshow.appendChild(boules);
+    boules.appendChild(result);
+
 
 
 
