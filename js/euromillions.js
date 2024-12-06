@@ -68,15 +68,30 @@ numeros.forEach((tirage) => {
 
     let boules = document.createElement('div');
   
-    boules.textContent = tirage.nombreAleatoire;
+    boules.textContent = tirage;
     boules.classList.add('zone', 'boule', 'show');
 
-    boules.appendChild(result);
-
+    result.appendChild(boules);
 
 
 
 });
+
+
+compl.forEach((bonus) => {
+
+
+    let etoiles = document.createElement('div');
+  
+    etoiles.textContent = bonus;
+    etoiles.classList.add('zone', 'etoile', 'show');
+
+    result.appendChild(etoiles);
+
+
+
+});
+
 
 
 
