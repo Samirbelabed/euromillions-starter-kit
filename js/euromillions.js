@@ -21,6 +21,7 @@ const numeros = [];
 const compl = [];
 
 
+
 while (numeros.length < 5) {
 
 
@@ -63,34 +64,53 @@ console.log(compl);
 
 
 
-numeros.forEach((tirage) => {
+numeros.forEach((tirage, index) => {
 
 
     let boules = document.createElement('div');
   
     boules.textContent = tirage;
-    boules.classList.add('zone', 'boule', 'show');
+    boules.classList.add('zone', 'boule');
 
     result.appendChild(boules);
+    
+    
+    setTimeout(function() {
+      boules.classList.add('show');
+    }, 500*index);
 
-
+ 
 
 });
 
 
-compl.forEach((bonus) => {
+compl.forEach((bonus, index) => {
 
 
     let etoiles = document.createElement('div');
   
     etoiles.textContent = bonus;
-    etoiles.classList.add('zone', 'etoile', 'show');
+    etoiles.classList.add('zone', 'etoile');
 
     result.appendChild(etoiles);
 
+    setTimeout(function() {
+        etoiles.classList.add('show');
+   
+       
+      }, 500*index+2500);
 
 
 });
+
+
+
+
+
+
+
+
+
 
 
 
